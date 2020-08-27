@@ -1,0 +1,3 @@
+curl -X POST http://localhost:3000/SetDocs \
+  -F "documento=@./docOrigem/Documento.pdf" \
+  -H "Content-Type: multipart/form-data"
