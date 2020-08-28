@@ -92,7 +92,7 @@ func SetDocs(c *fiber.Ctx) {
 	// Check for errors:
 	if err == nil {
 		// Save file to root directory:
-		c.SaveFile(file, fmt.Sprintf("./docDestino/%s", file.Filename))
+		// c.SaveFile(file, fmt.Sprintf("./docDestino/%s", file.Filename))
 
 		fileMultipart, _ := file.Open()
 		doc.Titulo = file.Filename

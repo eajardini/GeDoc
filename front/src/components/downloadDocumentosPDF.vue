@@ -45,7 +45,8 @@ export default {
   methods: {
     GetDocumentoParaDownload(documento){        
         console.log("Valor do ID:" + documento.id);
-        let formData = new FormData();        
+        let formData = new FormData();   
+        formData.append('IDDocumento', documento.id)     
 
         this.$http.post("/GetDocs", formData, {responseType: 'blob'})
           .then(function(response) {
